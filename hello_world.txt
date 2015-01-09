@@ -1,0 +1,8 @@
+echo left-meta r | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard
+sleep 1
+for C in n o t e p a d ; do echo \"$C\" ; sleep 0.01 ; done  | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard
+sleep 0.2
+echo enter | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard
+sleep 2
+for C in h e l l o space w o r l d ; do echo \"$C\" ; sleep 0.01 ; done  | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard
+sleep 0.2
