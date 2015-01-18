@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Android-HID</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="radioWindows">Windows</string>
+    <string name="radioLinux">Linux</string>
+    <string name="radioOSx">Mac</string>
+    <string name="choose_os">Choose target OS</string>
+    <string name="button_run">Run</string>
+    <string name="button_browse_files">Browse</string>
+    <string name="selected_script">No script selected</string>
+
+</resources>
