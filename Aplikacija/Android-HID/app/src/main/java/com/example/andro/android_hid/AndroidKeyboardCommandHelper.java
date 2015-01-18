@@ -34,7 +34,7 @@ public class AndroidKeyboardCommandHelper {
             returnCommand = returnCommand + AndroidKeyboardCommandHelper.parseChar(rawCommand.charAt(i)) + " ";
         }
 
-        returnCommand = returnCommand + "; do echo \"$C\" ; sleep 0.01 ; done | " + AndroidKeyboardCommandHelper.gadgetPath + ";";
+        returnCommand = returnCommand + "; do echo \"$C\" ; sleep 0.02 ; done | " + AndroidKeyboardCommandHelper.gadgetPath + ";";
 
         return returnCommand;
     }
@@ -57,6 +57,8 @@ public class AndroidKeyboardCommandHelper {
                 return "tab";
             case '-':
                 return "minus";
+            case '_':
+                return "'left-shift minus'";
             case '=':
                 return "equals";
             case '(':
@@ -64,17 +66,27 @@ public class AndroidKeyboardCommandHelper {
             case ')':
                 return "rbracket";
             case '\\':
-                return "backslash";
+                return "left-alt kp-9 kp-2";
             case '#':
                 return "hash";
             case ';':
                 return "semicolon";
+            case ':':
+                return "'left-shift semicolon'";
             case '~':
                 return "tilde";
             case '/':
                 return "slash";
+            case '%':
+                return "'left-shift 5";
+            case '>':
+                return "'left-shift stop'";
             default:
-                return String.valueOf(c);
+                if (Character.isUpperCase(c)) {
+                    return "'left-shift " + Character.toLowerCase(c) + "'";
+                } else {
+                    return String.valueOf(c);
+                }
         }
     }
 
